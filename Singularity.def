@@ -3,6 +3,7 @@ From: ubuntu:20.04
 
 %environment
     export LC_ALL=C
+    export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 %post
     apt-get update && apt-get install -y \
