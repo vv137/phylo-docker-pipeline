@@ -4,7 +4,8 @@ This project provides a containerized pipeline to generate phylogenetic trees fr
 
 - **MAFFT** – multiple sequence alignment  
 - **trimAl** – alignment trimming  
-- **FastTree** – phylogenetic tree inference  
+- **FastTree** – phylogenetic tree inference
+
 Everything runs in Docker or Singularity with a single command.
 
 ## 📁 Project Structure
