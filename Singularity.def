@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%environment
+    export LC_ALL=C
+
+%post
+    apt-get update && apt-get install -y \
+        curl \
+        git \
+        build-essential \
+        mafft \
+        trimal \
+        fasttree && \
+    apt-get clean
+
+    chmod +x /usr/local/bin/run_pipeline.sh
+
+%files
+    run_pipeline.sh /usr/local/bin/run_pipeline.sh
+
+%runscript
+    exec /usr/local/bin/run_pipeline.sh
