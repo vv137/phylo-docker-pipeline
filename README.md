@@ -85,7 +85,7 @@ singularity run --bind /path/to/data:/data phylo-tools.sif
 
 ## 📜 License
 
-MIT License. Use freely with attribution.
+Use freely with attribution.
 
 ## 🧠 Tips
 
