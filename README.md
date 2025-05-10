@@ -79,8 +79,8 @@ singularity run --bind /path/to/data:/data phylo-tools.sif
 ## 🧰 Tools Used
 
 - [MAFFT](https://mafft.cbrc.jp/alignment/software/)
-- [trimAl](http://trimal.cgenomics.org/)
-- [FastTree](http://www.microbesonline.org/fasttree/)
+- [trimAl](https://trimal.readthedocs.io/)
+- [FastTree](https://morgannprice.github.io/fasttree/)
 
 ## 📜 License
 
