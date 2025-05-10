@@ -35,6 +35,6 @@ env/
 .idea/
 
 # Optional: Ignore input/output data
-# input.fasta
-# *.fasta
+input.fasta
+*.fasta
 
