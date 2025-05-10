@@ -1,0 +1,40 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker artifacts
+*.log
+*.pid
+*.tar
+*.img
+*.container
+
+# MAFFT, FastTree, trimAl outputs
+aligned.fasta
+trimmed.fasta
+tree.nwk
+
+# Build files
+*.o
+*.out
+*.exe
+
+# Environment/Conda
+env/
+.venv/
+*.conda
+*.env
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Optional: Ignore input/output data
+# input.fasta
+# *.fasta
+
