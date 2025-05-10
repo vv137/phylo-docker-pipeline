@@ -1,11 +1,14 @@
 # 🧬 Phylogenetic Tree Pipeline (Docker & Singularity)
+
 This project provides a containerized pipeline to generate phylogenetic trees from protein sequences using:
+
 - **MAFFT** – multiple sequence alignment  
 - **trimAl** – alignment trimming  
 - **FastTree** – phylogenetic tree inference  
 Everything runs in Docker or Singularity with a single command.
 
 ## 📁 Project Structure
+
 ```
 phylo_project/
 ├── Dockerfile
@@ -18,42 +21,55 @@ phylo_project/
 ```
 
 ## ⚙️ Tools Required
+
 - **For Docker**: [Install Docker](https://docs.docker.com/get-docker/)
 - **For Singularity**: [Install Singularity](https://docs.sylabs.io/guides/latest/user-guide/)
 
 ## 🚀 Usage with Docker
+
 ### 1. Build the Docker image
+
 ```bash
 docker build -t phylo-tools .
 ```
 
 ### 2. Run the pipeline
+
 ```bash
 docker run --rm -v "$PWD":/data phylo-tools
 ```
+
 The pipeline will:
+
 - Align protein sequences with MAFFT
 - Trim with trimAl
 - Build a tree with FastTree
 - Save output as `tree.nwk`
 
 ## 🚀 Usage with Singularity
+
 ### 1. Build the Singularity image
+
 ```bash
 sudo singularity build phylo-tools.sif Singularity.def
 ```
+
 > Use `--fakeroot` if you do not have root access.
 
 ### 2. Run the container
+
 ```bash
 singularity run phylo-tools.sif
 ```
+
 Or bind a different directory:
+
 ```bash
 singularity run --bind /path/to/data:/data phylo-tools.sif
 ```
 
 ## 📄 Output Files
+
 | File            | Description                             |
 |-----------------|-----------------------------------------|
 | `aligned.fasta` | MAFFT-aligned protein sequences         |
@@ -61,13 +77,16 @@ singularity run --bind /path/to/data:/data phylo-tools.sif
 | `tree.nwk`      | Phylogenetic tree (Newick format)       |
 
 ## 🧰 Tools Used
+
 - [MAFFT](https://mafft.cbrc.jp/alignment/software/)
 - [trimAl](http://trimal.cgenomics.org/)
 - [FastTree](http://www.microbesonline.org/fasttree/)
 
 ## 📜 License
+
 MIT License. Use freely with attribution.
 
 ## 🧠 Tips
+
 - Use [iTOL](https://itol.embl.de/) or [FigTree](https://github.com/rambaut/figtree) to visualize `tree.nwk`.
 - You can customize `run_pipeline.sh` to suit different input types or models.
