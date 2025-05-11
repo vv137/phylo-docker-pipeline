@@ -17,6 +17,6 @@ echo "[2] Trimming alignment using trimAl..."
 trimal -in aligned.fasta -out trimmed.fasta -automated1
 
 echo "[3] Building phylogenetic tree with FastTree..."
-FastTree -protein trimmed.fasta > tree.nwk
+FastTree trimmed.fasta > tree.nwk
 
 echo "[✔] Done! Tree saved to tree.nwk"
